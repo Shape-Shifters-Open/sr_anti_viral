@@ -22,7 +22,6 @@ def clean_jobs(targets=['breed_gene']):
 
     jobs = pm.scriptJob(lj=True)
 
-    print ("sr_anti_viral is looking for suspicious script-jobs...")
     count = 0
 
     for job in jobs:
@@ -39,7 +38,5 @@ def clean_jobs(targets=['breed_gene']):
 
     if(count > 0):
         pm.warning("Deleted {} suspicious script-jobs.".format(count))
-    else:
-        print ("sr_anti_viral found no suspicious script-jobs.  No actions taken.")
 
     return
