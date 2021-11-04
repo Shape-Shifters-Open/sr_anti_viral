@@ -1,7 +1,8 @@
 # sr_anti_viral
 Simple suite that installs scriptJobs to counteract known "viral" scriptJobs spread through asset sharing.
+Brought to you by ShapeShifters Creative.  https://shapeshifterscreative.com
 
-Put the entire folder in your `site_packages` folder, then add the following to your `userSetup.py`:
+Put the entire folder in your `site_packages` folder, then add the following to your `userSetup.py` or any other module that registers early in start-up:
 ```
 # sr_anti_viral Start:
 import sr_anti_viral
@@ -9,6 +10,6 @@ sr_anti_viral.protection.register_protection_script()
 # sr_anti_viral End
 ```
 
-This will "cauterize" any file that contains the script nodes that spread the known virus.  Presently, hard-coded to target the rapidly spreading script job that shows a message that translates to "Your file is health, that is all I am here to say," and goes on to create `vaccine.py` and alter the `userSetup.py`.
+Running the `register_protection_script()` will add script jobs on file-read of any type, which check for the addition of the script-nodes that create the "vaccine" virus. As soon as such nodes are loaded, imported, or references, measures to immediately reverse their payload and delete them are taken.  For loading and importing, this will delete the problem nodes and undo the effects of their payload.  For references, when a problem node is detected within, the reference it belongs to will be forcibly unloaded (and the payload effects reversed.)
 
-If your userSetup.py has already been altered by this, this tool won't revert those changes or remove the new `.py` files from the scripts folder- but it will prevent any Maya session from adding more.
+Due to the specificity of the nodes it targets, we give an informal garuntee that your scenes won't be messed with (unless they rely on reference nodes pointing at infected files.)
