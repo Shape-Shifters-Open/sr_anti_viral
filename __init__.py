@@ -9,8 +9,5 @@ import scriptjobs
 import nodes
 import protection
 
-print ("sr_anti_viral is loaded.")
-
-protection.register_protection_script()
 
 # EOF

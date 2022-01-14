@@ -23,6 +23,8 @@ def clean_jobs(targets=['breed_gene']):
 
     # Add reading of the block file later, for now we are hard coding what we are looking for.
 
+    print("SR_ANTIVIRAL is looking for known problem script jobs...")
+
     jobs = pm.scriptJob(lj=True)
 
     count = 0
@@ -41,5 +43,7 @@ def clean_jobs(targets=['breed_gene']):
 
     if(count > 0):
         pm.warning("Deleted {} suspicious script-jobs.".format(count))
+    else:
+        print("...SR_ANTI_VIRAL found no suspicious script jobs...")
 
     return
