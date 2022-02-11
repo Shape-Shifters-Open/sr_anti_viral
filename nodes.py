@@ -11,7 +11,7 @@ Using pre-defined names.
 
 import pymel.core as pm
 import os
-import protection
+from . import protection
 
 # We may want to pull the names of nodes from a file at some point.  Some regular text-file that
 # artists can quickly edit.

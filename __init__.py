@@ -5,9 +5,8 @@ Matt Riche 2021
 With Shapershifters Creative team and Burlington Interactive Solutions
 '''
 
-import scriptjobs
-import nodes
-import protection
-
+from . import scriptjobs
+from . import nodes
+from . import protection
 
 # EOF

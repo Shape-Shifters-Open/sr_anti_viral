@@ -12,8 +12,8 @@ deliver their 'payload'
 import pymel.core as pm
 import os
 
-import nodes
-import scriptjobs
+from . import nodes
+from . import scriptjobs
 
 def register_protection_script():
     '''
@@ -78,6 +78,7 @@ def full_clean():
 
     nodes.clean_bad_nodes()
     scriptjobs.clean_jobs()
+    scriptjobs.clean_viewport_updates()
     return    
 
 
