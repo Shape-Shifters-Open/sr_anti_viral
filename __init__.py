@@ -5,12 +5,8 @@ Matt Riche 2021
 With Shapershifters Creative team and Burlington Interactive Solutions
 '''
 
-import scriptjobs
-import nodes
-import protection
-
-print ("sr_anti_viral is loaded.")
-
-protection.register_protection_script()
+from . import scriptjobs
+from . import nodes
+from . import protection
 
 # EOF
