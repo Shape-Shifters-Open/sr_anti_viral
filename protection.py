@@ -79,7 +79,8 @@ def full_clean():
     nodes.clean_bad_nodes()
     scriptjobs.clean_jobs()
     scriptjobs.clean_viewport_updates()
-    return    
+    
+    return 
 
 
 def backup_usersetup():
