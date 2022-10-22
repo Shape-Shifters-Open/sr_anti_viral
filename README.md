@@ -2,7 +2,7 @@
 Simple suite that installs scriptJobs to counteract known "viral" scriptJobs spread through asset sharing.
 Brought to you by ShapeShifters Creative.  https://shapeshifterscreative.com
 
-Put the entire folder in your `site_packages` folder, then add the following to your `userSetup.py` or any other module that registers early in start-up:
+Put the entire folder in your `...\Documents\maya\scripts` folder, then add the following to your `userSetup.py` or any other module that registers early in start-up:
 ```
 # sr_anti_viral Start:
 import sr_anti_viral
